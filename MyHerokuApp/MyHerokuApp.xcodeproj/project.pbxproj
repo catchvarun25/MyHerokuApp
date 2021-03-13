@@ -15,6 +15,20 @@
 		B96111D425FC683C003B1E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96111D225FC683C003B1E4F /* LaunchScreen.storyboard */; };
 		B96111DF25FC683D003B1E4F /* MyHerokuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */; };
 		B96111EA25FC683D003B1E4F /* MyHerokuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */; };
+		B96111FE25FC6B76003B1E4F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111FD25FC6B76003B1E4F /* Game.swift */; };
+		B961120025FC6B9A003B1E4F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111FF25FC6B9A003B1E4F /* Card.swift */; };
+		B961120225FC6BF9003B1E4F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120125FC6BF9003B1E4F /* CardView.swift */; };
+		B961120425FC6C20003B1E4F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120325FC6C20003B1E4F /* GameViewController.swift */; };
+		B961120625FC6D1A003B1E4F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120525FC6D1A003B1E4F /* GameViewModel.swift */; };
+		B961120825FC6D52003B1E4F /* GameViewModelFromGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */; };
+		B961120A25FC6D8F003B1E4F /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120925FC6D8F003B1E4F /* GameConstants.swift */; };
+		B961120C25FC6DE9003B1E4F /* CardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120B25FC6DE8003B1E4F /* CardConstants.swift */; };
+		B961120E25FC6F3A003B1E4F /* UIColor+CardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120D25FC6F3A003B1E4F /* UIColor+CardTheme.swift */; };
+		B961121025FC6F57003B1E4F /* UIColor+AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120F25FC6F57003B1E4F /* UIColor+AppTheme.swift */; };
+		B961121225FC749C003B1E4F /* Int+Manipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121125FC749C003B1E4F /* Int+Manipulation.swift */; };
+		B961121425FC7ADA003B1E4F /* RxType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121325FC7ADA003B1E4F /* RxType.swift */; };
+		B961121725FC8328003B1E4F /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121625FC8328003B1E4F /* GameManager.swift */; };
+		B961121925FC9497003B1E4F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121825FC9497003B1E4F /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		B96111E525FC683D003B1E4F /* MyHerokuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHerokuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHerokuAppUITests.swift; sourceTree = "<group>"; };
 		B96111EB25FC683D003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96111FD25FC6B76003B1E4F /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		B96111FF25FC6B9A003B1E4F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B961120125FC6BF9003B1E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B961120325FC6C20003B1E4F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B961120525FC6D1A003B1E4F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelFromGame.swift; sourceTree = "<group>"; };
+		B961120925FC6D8F003B1E4F /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
+		B961120B25FC6DE8003B1E4F /* CardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConstants.swift; sourceTree = "<group>"; };
+		B961120D25FC6F3A003B1E4F /* UIColor+CardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CardTheme.swift"; sourceTree = "<group>"; };
+		B961120F25FC6F57003B1E4F /* UIColor+AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+AppTheme.swift"; sourceTree = "<group>"; };
+		B961121125FC749C003B1E4F /* Int+Manipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Manipulation.swift"; sourceTree = "<group>"; };
+		B961121325FC7ADA003B1E4F /* RxType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxType.swift; sourceTree = "<group>"; };
+		B961121625FC8328003B1E4F /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		B961121825FC9497003B1E4F /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +127,7 @@
 		B96111C625FC683A003B1E4F /* MyHerokuApp */ = {
 			isa = PBXGroup;
 			children = (
+				B961121525FC8318003B1E4F /* Services */,
 				B96111FC25FC68AB003B1E4F /* Constants */,
 				B96111FB25FC6891003B1E4F /* Utilities */,
 				B96111FA25FC6888003B1E4F /* Extensions */,
@@ -137,6 +166,8 @@
 		B96111F725FC6864003B1E4F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B96111FD25FC6B76003B1E4F /* Game.swift */,
+				B96111FF25FC6B9A003B1E4F /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -144,6 +175,8 @@
 		B96111F825FC686E003B1E4F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B961120125FC6BF9003B1E4F /* CardView.swift */,
+				B961120325FC6C20003B1E4F /* GameViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -151,6 +184,8 @@
 		B96111F925FC6875003B1E4F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B961120525FC6D1A003B1E4F /* GameViewModel.swift */,
+				B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -158,6 +193,9 @@
 		B96111FA25FC6888003B1E4F /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				B961120D25FC6F3A003B1E4F /* UIColor+CardTheme.swift */,
+				B961120F25FC6F57003B1E4F /* UIColor+AppTheme.swift */,
+				B961121125FC749C003B1E4F /* Int+Manipulation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,6 +203,8 @@
 		B96111FB25FC6891003B1E4F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				B961121325FC7ADA003B1E4F /* RxType.swift */,
+				B961121825FC9497003B1E4F /* Math.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -172,8 +212,18 @@
 		B96111FC25FC68AB003B1E4F /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				B961120925FC6D8F003B1E4F /* GameConstants.swift */,
+				B961120B25FC6DE8003B1E4F /* CardConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		B961121525FC8318003B1E4F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B961121625FC8328003B1E4F /* GameManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,9 +357,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B961120425FC6C20003B1E4F /* GameViewController.swift in Sources */,
+				B961121725FC8328003B1E4F /* GameManager.swift in Sources */,
 				B96111CC25FC683A003B1E4F /* ViewController.swift in Sources */,
 				B96111C825FC683A003B1E4F /* AppDelegate.swift in Sources */,
+				B961120E25FC6F3A003B1E4F /* UIColor+CardTheme.swift in Sources */,
+				B961120025FC6B9A003B1E4F /* Card.swift in Sources */,
+				B961120C25FC6DE9003B1E4F /* CardConstants.swift in Sources */,
+				B961121225FC749C003B1E4F /* Int+Manipulation.swift in Sources */,
+				B961121425FC7ADA003B1E4F /* RxType.swift in Sources */,
+				B961120625FC6D1A003B1E4F /* GameViewModel.swift in Sources */,
+				B961121925FC9497003B1E4F /* Math.swift in Sources */,
 				B96111CA25FC683A003B1E4F /* SceneDelegate.swift in Sources */,
+				B961121025FC6F57003B1E4F /* UIColor+AppTheme.swift in Sources */,
+				B961120825FC6D52003B1E4F /* GameViewModelFromGame.swift in Sources */,
+				B961120225FC6BF9003B1E4F /* CardView.swift in Sources */,
+				B96111FE25FC6B76003B1E4F /* Game.swift in Sources */,
+				B961120A25FC6D8F003B1E4F /* GameConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
