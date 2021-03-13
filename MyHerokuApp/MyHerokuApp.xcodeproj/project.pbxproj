@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B96111C825FC683A003B1E4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111C725FC683A003B1E4F /* AppDelegate.swift */; };
+		B96111CA25FC683A003B1E4F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111C925FC683A003B1E4F /* SceneDelegate.swift */; };
+		B96111CC25FC683A003B1E4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111CB25FC683A003B1E4F /* ViewController.swift */; };
+		B96111CF25FC683A003B1E4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96111CD25FC683A003B1E4F /* Main.storyboard */; };
+		B96111D125FC683C003B1E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96111D025FC683C003B1E4F /* Assets.xcassets */; };
+		B96111D425FC683C003B1E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96111D225FC683C003B1E4F /* LaunchScreen.storyboard */; };
+		B96111DF25FC683D003B1E4F /* MyHerokuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */; };
+		B96111EA25FC683D003B1E4F /* MyHerokuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B96111DB25FC683D003B1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B96111BC25FC683A003B1E4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B96111C325FC683A003B1E4F;
+			remoteInfo = MyHerokuApp;
+		};
+		B96111E625FC683D003B1E4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B96111BC25FC683A003B1E4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B96111C325FC683A003B1E4F;
+			remoteInfo = MyHerokuApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B96111C425FC683A003B1E4F /* MyHerokuApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyHerokuApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96111C725FC683A003B1E4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B96111C925FC683A003B1E4F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B96111CB25FC683A003B1E4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B96111CE25FC683A003B1E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B96111D025FC683C003B1E4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B96111D325FC683C003B1E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B96111D525FC683C003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96111DA25FC683D003B1E4F /* MyHerokuAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHerokuAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHerokuAppTests.swift; sourceTree = "<group>"; };
+		B96111E025FC683D003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B96111E525FC683D003B1E4F /* MyHerokuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHerokuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHerokuAppUITests.swift; sourceTree = "<group>"; };
+		B96111EB25FC683D003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B96111C125FC683A003B1E4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111D725FC683D003B1E4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111E225FC683D003B1E4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B96111BB25FC683A003B1E4F = {
+			isa = PBXGroup;
+			children = (
+				B96111C625FC683A003B1E4F /* MyHerokuApp */,
+				B96111DD25FC683D003B1E4F /* MyHerokuAppTests */,
+				B96111E825FC683D003B1E4F /* MyHerokuAppUITests */,
+				B96111C525FC683A003B1E4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B96111C525FC683A003B1E4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B96111C425FC683A003B1E4F /* MyHerokuApp.app */,
+				B96111DA25FC683D003B1E4F /* MyHerokuAppTests.xctest */,
+				B96111E525FC683D003B1E4F /* MyHerokuAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B96111C625FC683A003B1E4F /* MyHerokuApp */ = {
+			isa = PBXGroup;
+			children = (
+				B96111FC25FC68AB003B1E4F /* Constants */,
+				B96111FB25FC6891003B1E4F /* Utilities */,
+				B96111FA25FC6888003B1E4F /* Extensions */,
+				B96111F925FC6875003B1E4F /* ViewModel */,
+				B96111F825FC686E003B1E4F /* View */,
+				B96111F725FC6864003B1E4F /* Model */,
+				B96111C725FC683A003B1E4F /* AppDelegate.swift */,
+				B96111C925FC683A003B1E4F /* SceneDelegate.swift */,
+				B96111CB25FC683A003B1E4F /* ViewController.swift */,
+				B96111CD25FC683A003B1E4F /* Main.storyboard */,
+				B96111D025FC683C003B1E4F /* Assets.xcassets */,
+				B96111D225FC683C003B1E4F /* LaunchScreen.storyboard */,
+				B96111D525FC683C003B1E4F /* Info.plist */,
+			);
+			path = MyHerokuApp;
+			sourceTree = "<group>";
+		};
+		B96111DD25FC683D003B1E4F /* MyHerokuAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */,
+				B96111E025FC683D003B1E4F /* Info.plist */,
+			);
+			path = MyHerokuAppTests;
+			sourceTree = "<group>";
+		};
+		B96111E825FC683D003B1E4F /* MyHerokuAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */,
+				B96111EB25FC683D003B1E4F /* Info.plist */,
+			);
+			path = MyHerokuAppUITests;
+			sourceTree = "<group>";
+		};
+		B96111F725FC6864003B1E4F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B96111F825FC686E003B1E4F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B96111F925FC6875003B1E4F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B96111FA25FC6888003B1E4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B96111FB25FC6891003B1E4F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		B96111FC25FC68AB003B1E4F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B96111C325FC683A003B1E4F /* MyHerokuApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B96111EE25FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuApp" */;
+			buildPhases = (
+				B96111C025FC683A003B1E4F /* Sources */,
+				B96111C125FC683A003B1E4F /* Frameworks */,
+				B96111C225FC683A003B1E4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyHerokuApp;
+			productName = MyHerokuApp;
+			productReference = B96111C425FC683A003B1E4F /* MyHerokuApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B96111D925FC683D003B1E4F /* MyHerokuAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B96111F125FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuAppTests" */;
+			buildPhases = (
+				B96111D625FC683D003B1E4F /* Sources */,
+				B96111D725FC683D003B1E4F /* Frameworks */,
+				B96111D825FC683D003B1E4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B96111DC25FC683D003B1E4F /* PBXTargetDependency */,
+			);
+			name = MyHerokuAppTests;
+			productName = MyHerokuAppTests;
+			productReference = B96111DA25FC683D003B1E4F /* MyHerokuAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B96111E425FC683D003B1E4F /* MyHerokuAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B96111F425FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuAppUITests" */;
+			buildPhases = (
+				B96111E125FC683D003B1E4F /* Sources */,
+				B96111E225FC683D003B1E4F /* Frameworks */,
+				B96111E325FC683D003B1E4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B96111E725FC683D003B1E4F /* PBXTargetDependency */,
+			);
+			name = MyHerokuAppUITests;
+			productName = MyHerokuAppUITests;
+			productReference = B96111E525FC683D003B1E4F /* MyHerokuAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B96111BC25FC683A003B1E4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Varun Mehta";
+				TargetAttributes = {
+					B96111C325FC683A003B1E4F = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					B96111D925FC683D003B1E4F = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = B96111C325FC683A003B1E4F;
+					};
+					B96111E425FC683D003B1E4F = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = B96111C325FC683A003B1E4F;
+					};
+				};
+			};
+			buildConfigurationList = B96111BF25FC683A003B1E4F /* Build configuration list for PBXProject "MyHerokuApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B96111BB25FC683A003B1E4F;
+			productRefGroup = B96111C525FC683A003B1E4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B96111C325FC683A003B1E4F /* MyHerokuApp */,
+				B96111D925FC683D003B1E4F /* MyHerokuAppTests */,
+				B96111E425FC683D003B1E4F /* MyHerokuAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B96111C225FC683A003B1E4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96111D425FC683C003B1E4F /* LaunchScreen.storyboard in Resources */,
+				B96111D125FC683C003B1E4F /* Assets.xcassets in Resources */,
+				B96111CF25FC683A003B1E4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111D825FC683D003B1E4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111E325FC683D003B1E4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B96111C025FC683A003B1E4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96111CC25FC683A003B1E4F /* ViewController.swift in Sources */,
+				B96111C825FC683A003B1E4F /* AppDelegate.swift in Sources */,
+				B96111CA25FC683A003B1E4F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111D625FC683D003B1E4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96111DF25FC683D003B1E4F /* MyHerokuAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B96111E125FC683D003B1E4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B96111EA25FC683D003B1E4F /* MyHerokuAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B96111DC25FC683D003B1E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B96111C325FC683A003B1E4F /* MyHerokuApp */;
+			targetProxy = B96111DB25FC683D003B1E4F /* PBXContainerItemProxy */;
+		};
+		B96111E725FC683D003B1E4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B96111C325FC683A003B1E4F /* MyHerokuApp */;
+			targetProxy = B96111E625FC683D003B1E4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B96111CD25FC683A003B1E4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B96111CE25FC683A003B1E4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B96111D225FC683C003B1E4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B96111D325FC683C003B1E4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B96111EC25FC683D003B1E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B96111ED25FC683D003B1E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B96111EF25FC683D003B1E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B96111F025FC683D003B1E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B96111F225FC683D003B1E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyHerokuApp.app/MyHerokuApp";
+			};
+			name = Debug;
+		};
+		B96111F325FC683D003B1E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuAppTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyHerokuApp.app/MyHerokuApp";
+			};
+			name = Release;
+		};
+		B96111F525FC683D003B1E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyHerokuApp;
+			};
+			name = Debug;
+		};
+		B96111F625FC683D003B1E4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MyHerokuAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.varunmehta.MyHerokuAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyHerokuApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B96111BF25FC683A003B1E4F /* Build configuration list for PBXProject "MyHerokuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96111EC25FC683D003B1E4F /* Debug */,
+				B96111ED25FC683D003B1E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B96111EE25FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96111EF25FC683D003B1E4F /* Debug */,
+				B96111F025FC683D003B1E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B96111F125FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96111F225FC683D003B1E4F /* Debug */,
+				B96111F325FC683D003B1E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B96111F425FC683D003B1E4F /* Build configuration list for PBXNativeTarget "MyHerokuAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B96111F525FC683D003B1E4F /* Debug */,
+				B96111F625FC683D003B1E4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B96111BC25FC683A003B1E4F /* Project object */;
+}
