@@ -12,3 +12,10 @@ enum CardState {
     case Open
     case Close
 }
+
+struct CardConstant {
+    struct size {
+        static let height = 60.0
+        static let width = 30.0
+    }
+}

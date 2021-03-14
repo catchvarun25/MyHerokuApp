@@ -10,5 +10,5 @@ import UIKit
 
 extension UIColor {
     static let scoreColor = UIColor.blue
-    static let gameBackGroundColor = UIColor.black
+    static let gameBackgroundColor = UIColor.black
 }

@@ -17,4 +17,13 @@ enum GameState {
 struct GameConstants {
     static let CARD_PAIRS_VALUE = 6
     static let NUMBER_OF_CARDS = CARD_PAIRS_VALUE * 2
+    
+    struct GameViewStrings {
+        static let RESET_BTN_LABEL  = "Reset Game"
+        static let STEP_COUNT_LABEL = "STEPS: %d"
+    }
+    
+    struct CardViewStrings {
+        static let CARD_CELL_IDENTIFIER = "CardViewCell"
+    }
 }

@@ -9,6 +9,11 @@
 import UIKit
 
 extension UIColor {
-    static let cardBackgroundColor = UIColor.blue
-    static let cardBorderColor = UIColor.white
+    static let cardBackgroundColorClose = UIColor.blue
+    static let cardBackgroundColorOpen  = UIColor.white
+    static let cardBorderColor          = UIColor.white
+    static let cardLabelBackgroundColor = UIColor.clear
+    static let cardLabelTextColorClose  = UIColor.white
+    static let cardLabelTextColorOpen   = UIColor.black
+
 }

@@ -9,10 +9,10 @@
 import Foundation
 
 class Game {
-    var steps: Int       //steps taken by user
-    var state:GameState  //Current state of game
-    var cards: [Card]    //Keep the state of every card
-    var isFinished:Bool  //To check game state
+    private(set) var steps: Int       //steps taken by user
+    private(set) var state:GameState  //Current state of game
+    private(set) var cards: [Card]    //Keep the state of every card
+    private(set) var isFinished:Bool  //To check game state
     init() {
         self.steps = 0
         self.state = .NotStarted
@@ -43,6 +43,11 @@ class Game {
     
     func addCard(card: Card) {
         self.cards.append(card)
+    }
+    
+    func updateCardAt(index: Int, state: CardState) {
+        let oldCard = self.cards[index];
+        oldCard.updateCard(state: state)
     }
         
     //MARK: - Private Methods -

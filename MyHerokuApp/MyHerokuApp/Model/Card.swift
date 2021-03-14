@@ -10,7 +10,7 @@ import Foundation
 
 class Card {
     let number: UInt32          //Random number on card
-    var state:CardState      // Card Open OR Close
+    private (set) var state:CardState      // Card Open OR Close
     
     init(number: UInt32) {
         self.number = number
