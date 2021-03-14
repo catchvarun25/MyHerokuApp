@@ -10,8 +10,10 @@ import Foundation
 
 protocol GameViewModel {
     var game: Game { get }
-    var stepCount: Int { get }
-    var isFinished: Bool { get }
+    var stepCount: Rx<Int> { get }
+    var isFinished: Rx<Bool> { get }
+    var isReset: Rx<Bool> { get }
+    var selectedCardIndex:Rx<Int> { get }
     func resetGame()
-    func updateCardStateTo(_ state: CardState, forCardAt index: Int)
+    func didSelectCardAt(index: Int)
 }

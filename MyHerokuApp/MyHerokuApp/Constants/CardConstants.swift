@@ -18,4 +18,8 @@ struct CardConstant {
         static let height = 60.0
         static let width = 30.0
     }
+    struct border {
+        static let radius = 5.0
+        static let width  = 2.0
+    }
 }

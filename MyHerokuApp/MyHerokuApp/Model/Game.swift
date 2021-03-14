@@ -21,48 +21,22 @@ class Game {
     }
     //MARK:- Public Methods -
     func incrementSteps()  {
-        guard state == .InProgress else {
-            return
-        }
-        steps.incrementByOne()
+        self.steps.incrementByOne()
     }
     
     func resetGame() {
-        guard state == .InProgress else {
-            return
-        }
         //Reset Steps
         self.state = GameState.NotStarted
         self.steps = 0
-        
-        //Close All Cards
-        for card in cards {
-            card.updateCard(state: .Close)
-        }
+        self.cards.removeAll()
     }
     
     func addCard(card: Card) {
         self.cards.append(card)
     }
     
-    func updateCardAt(index: Int, state: CardState) {
-        let oldCard = self.cards[index];
-        oldCard.updateCard(state: state)
+    func updateGameState(state: GameState) {
+        self.state = state
     }
-        
-    //MARK: - Private Methods -
-
-    /**
-     To check the state of the game through the state of all cards.
-     */
-    fileprivate func checkIfFinished() -> Bool {
-        for card in self.cards {
-            if card.state == .Close { //If any card in CLOSED state
-                return false
-            }
-        }
-        return true
-    }
-    
     
 }

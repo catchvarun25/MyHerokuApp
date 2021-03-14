@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         //Loading Game Data while app lauching
-        let gameManager: GameManager = GameManager()
+        let gameManager: GameManager = GameManager.shared
         gameManager.startGame()
         
         //Preparing GameViewController

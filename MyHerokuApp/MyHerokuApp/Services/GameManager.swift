@@ -11,11 +11,15 @@ import Foundation
 protocol GameControls {
     var game: Game { get }
     func startGame()
-    func resetGame()
+    func resetGame(_ completion: ()->())
 }
 
 class GameManager: GameControls {
-    var game: Game = Game()
+    let game: Game
+    static let shared = GameManager()
+    private init() {
+        game = Game()
+    }
     
     //MARK:- Public Methods -
     func startGame() {
@@ -26,13 +30,15 @@ class GameManager: GameControls {
         }
     }
     
-    func resetGame() {
+    func resetGame(_ completion: ()->()) {
         //Reset Game Model
-        self.game.resetGame()        
+        self.game.resetGame()
+        self.startGame()
+        completion()
     }
     //MARK:- Private Methods -
     fileprivate func makeNumberList() -> [UInt32] {
-        let numbers = (0..<GameConstants.CARD_PAIRS_VALUE).map { _ in Math.randomIn(1..<100) }
+        let numbers = (0..<Constants.CARD_PAIRS_VALUE).map { _ in Math.randomIn(1..<100) }
         var final:[UInt32] = [UInt32]()
         final.append(contentsOf: numbers)
         final.append(contentsOf: numbers)

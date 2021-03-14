@@ -18,24 +18,13 @@ extension GameViewController:UICollectionViewDataSource, UICollectionViewDelegat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: CardView = collectionView.dequeueReusableCell(withReuseIdentifier: GameConstants.CardViewStrings.CARD_CELL_IDENTIFIER, for: indexPath) as! CardView
+        let cell: CardView = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CardView.Literals.CARD_CELL_IDENTIFIER, for: indexPath) as! CardView
         cell.card = self.viewModel?.game.cards[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let game = self.viewModel?.game else {
-            return
-        }
-        //Selected Card
-        let selectedCard = game.cards[indexPath.row]
-        
-        //Open card if closed else don't do anything
-        guard selectedCard.state == .Close else {
-            return
-        }
-        self.viewModel?.updateCardStateTo(.Open, forCardAt: indexPath.row)
-        collectionView.reloadItems(at: [indexPath])
+        self.viewModel?.didSelectCardAt(index: indexPath.row)
     }
 
 }

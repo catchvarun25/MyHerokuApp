@@ -42,6 +42,9 @@ class CardView: UICollectionViewCell {
     }
     
     fileprivate func updateCardDesign() {
+        self.layer.cornerRadius = CGFloat(CardConstant.border.radius)
+        self.layer.borderWidth  = CGFloat(CardConstant.border.width)
+        self.layer.borderColor  = UIColor.cardBorderColor.cgColor
         if self.card?.state == .Close {
             self.backgroundColor = .cardBackgroundColorClose
             self.numberLabel.textColor = .cardLabelTextColorClose
