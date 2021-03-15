@@ -14,7 +14,7 @@
 		B96111CF25FC683A003B1E4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96111CD25FC683A003B1E4F /* Main.storyboard */; };
 		B96111D125FC683C003B1E4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96111D025FC683C003B1E4F /* Assets.xcassets */; };
 		B96111D425FC683C003B1E4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96111D225FC683C003B1E4F /* LaunchScreen.storyboard */; };
-		B96111DF25FC683D003B1E4F /* MyHerokuAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */; };
+		B96111DF25FC683D003B1E4F /* GameViewModelTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111DE25FC683D003B1E4F /* GameViewModelTesting.swift */; };
 		B96111EA25FC683D003B1E4F /* MyHerokuAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */; };
 		B96111FE25FC6B76003B1E4F /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111FD25FC6B76003B1E4F /* Game.swift */; };
 		B961120025FC6B9A003B1E4F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111FF25FC6B9A003B1E4F /* Card.swift */; };
@@ -32,6 +32,7 @@
 		B961121925FC9497003B1E4F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121825FC9497003B1E4F /* Math.swift */; };
 		B961121D25FCB425003B1E4F /* GameViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121C25FCB425003B1E4F /* GameViewDataSource.swift */; };
 		B9BEE52A25FFBABB00A242F3 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEE52925FFBABB00A242F3 /* UIView+Animation.swift */; };
+		B9BEE52E25FFC3ED00A242F3 /* MockGameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEE52D25FFC3ED00A242F3 /* MockGameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,7 +63,7 @@
 		B96111D325FC683C003B1E4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B96111D525FC683C003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96111DA25FC683D003B1E4F /* MyHerokuAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHerokuAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHerokuAppTests.swift; sourceTree = "<group>"; };
+		B96111DE25FC683D003B1E4F /* GameViewModelTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelTesting.swift; sourceTree = "<group>"; };
 		B96111E025FC683D003B1E4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B96111E525FC683D003B1E4F /* MyHerokuAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyHerokuAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B96111E925FC683D003B1E4F /* MyHerokuAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHerokuAppUITests.swift; sourceTree = "<group>"; };
@@ -83,6 +84,7 @@
 		B961121825FC9497003B1E4F /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		B961121C25FCB425003B1E4F /* GameViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewDataSource.swift; sourceTree = "<group>"; };
 		B9BEE52925FFBABB00A242F3 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
+		B9BEE52D25FFC3ED00A242F3 /* MockGameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +165,7 @@
 		B96111DD25FC683D003B1E4F /* MyHerokuAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				B96111DE25FC683D003B1E4F /* MyHerokuAppTests.swift */,
+				B9BEE52B25FFC3B300A242F3 /* GameViewModelFromGame */,
 				B96111E025FC683D003B1E4F /* Info.plist */,
 			);
 			path = MyHerokuAppTests;
@@ -257,6 +259,15 @@
 				B961120125FC6BF9003B1E4F /* CardView.swift */,
 			);
 			path = CardView;
+			sourceTree = "<group>";
+		};
+		B9BEE52B25FFC3B300A242F3 /* GameViewModelFromGame */ = {
+			isa = PBXGroup;
+			children = (
+				B96111DE25FC683D003B1E4F /* GameViewModelTesting.swift */,
+				B9BEE52D25FFC3ED00A242F3 /* MockGameManager.swift */,
+			);
+			path = GameViewModelFromGame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +428,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B96111DF25FC683D003B1E4F /* MyHerokuAppTests.swift in Sources */,
+				B96111DF25FC683D003B1E4F /* GameViewModelTesting.swift in Sources */,
+				B9BEE52E25FFC3ED00A242F3 /* MockGameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,8 @@ class GameViewModelFromGame: GameViewModel {
     
     let game: Game
     
+    private let gameManager: GameControls
+    
     private(set) var stepCount: Rx<Int>
     
     private(set) var isFinished: Rx<Bool>
@@ -24,12 +26,13 @@ class GameViewModelFromGame: GameViewModel {
     
     private(set) var secondOpenCard:(index:Int, card:Card)?
     
-    init(_ game: Game) {
+    init(_ game: Game, manager: GameControls) {
         self.game       = game
         self.stepCount  = Rx(game.steps)
         self.isFinished = Rx(game.isFinished)
         self.isReset    = Rx(false)
         self.selectedCardIndex = Rx(0)
+        self.gameManager = manager
     }
     
     func resetGame() {
@@ -37,14 +40,14 @@ class GameViewModelFromGame: GameViewModel {
             return
         }
         //Reset Game Model
-        let gameManager = GameManager.shared
         gameManager.resetGame {
             self.isReset.value = true
         }
         //Reset
         self.stepCount.value = self.game.steps
         self.game.updateGameState(state: .NotStarted)
-
+        self.firstOpenCard = nil
+        self.secondOpenCard = nil
     }
     
     func didSelectCardAt(index: Int) {

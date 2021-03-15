@@ -12,6 +12,7 @@ protocol GameControls {
     var game: Game { get }
     func startGame()
     func resetGame(_ completion: ()->())
+    func getRandomNumbers() ->[UInt32]
 }
 
 class GameManager: GameControls {
@@ -23,7 +24,7 @@ class GameManager: GameControls {
     
     //MARK:- Public Methods -
     func startGame() {
-        let numberList = makeNumberList()
+        let numberList = getRandomNumbers()
         for currentNumber in numberList {
             let card = Card(number: currentNumber)
             game.addCard(card: card)
@@ -36,15 +37,12 @@ class GameManager: GameControls {
         self.startGame()
         completion()
     }
-    //MARK:- Private Methods -
-    fileprivate func makeNumberList() -> [UInt32] {
+    
+    func getRandomNumbers() -> [UInt32] {
         let numbers = (0..<Constants.CARD_PAIRS_VALUE).map { _ in Math.randomIn(1..<100) }
         var final:[UInt32] = [UInt32]()
         final.append(contentsOf: numbers)
         final.append(contentsOf: numbers)
         return final.shuffled()
     }
-    
-    
-    
 }

@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         gameManager.startGame()
         
         //Preparing GameViewController
-        let gameViewModel = GameViewModelFromGame(gameManager.game)
+        let gameViewModel = GameViewModelFromGame(gameManager.game, manager: gameManager)
         let gameViewController: GameViewController = GameViewController()
         gameViewController.viewModel = gameViewModel
         
