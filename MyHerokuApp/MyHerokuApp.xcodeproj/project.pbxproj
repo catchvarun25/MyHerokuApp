@@ -31,6 +31,7 @@
 		B961121725FC8328003B1E4F /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121625FC8328003B1E4F /* GameManager.swift */; };
 		B961121925FC9497003B1E4F /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121825FC9497003B1E4F /* Math.swift */; };
 		B961121D25FCB425003B1E4F /* GameViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961121C25FCB425003B1E4F /* GameViewDataSource.swift */; };
+		B9BEE52A25FFBABB00A242F3 /* UIView+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9BEE52925FFBABB00A242F3 /* UIView+Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		B961121625FC8328003B1E4F /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		B961121825FC9497003B1E4F /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		B961121C25FCB425003B1E4F /* GameViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewDataSource.swift; sourceTree = "<group>"; };
+		B9BEE52925FFBABB00A242F3 /* UIView+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Animation.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +211,7 @@
 				B961120F25FC6F57003B1E4F /* UIColor+AppTheme.swift */,
 				B961121125FC749C003B1E4F /* Int+Manipulation.swift */,
 				B946D11B25FDB55900FB5066 /* UIFont+Label.swift */,
+				B9BEE52925FFBABB00A242F3 /* UIView+Animation.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				B961121D25FCB425003B1E4F /* GameViewDataSource.swift in Sources */,
 				B961120825FC6D52003B1E4F /* GameViewModelFromGame.swift in Sources */,
 				B961120225FC6BF9003B1E4F /* CardView.swift in Sources */,
+				B9BEE52A25FFBABB00A242F3 /* UIView+Animation.swift in Sources */,
 				B96111FE25FC6B76003B1E4F /* Game.swift in Sources */,
 				B961120A25FC6D8F003B1E4F /* GameConstants.swift in Sources */,
 			);

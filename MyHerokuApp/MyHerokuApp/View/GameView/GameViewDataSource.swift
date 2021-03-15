@@ -31,7 +31,7 @@ extension GameViewController:UICollectionViewDataSource, UICollectionViewDelegat
 
 extension GameViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.size.width/3 - 10, height: collectionView.frame.size.height/4)
+        return CGSize(width: collectionView.frame.size.width/3 - 10, height: (collectionView.frame.size.height - CGFloat(Constants.GameView.Design.RESET_BTN_HEIGHT))/4)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 0.0

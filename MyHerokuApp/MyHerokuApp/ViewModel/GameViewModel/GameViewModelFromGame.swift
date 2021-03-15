@@ -33,7 +33,7 @@ class GameViewModelFromGame: GameViewModel {
     }
     
     func resetGame() {
-        guard game.state == .InProgress else {
+        guard game.state != .NotStarted else {
             return
         }
         //Reset Game Model
@@ -43,6 +43,8 @@ class GameViewModelFromGame: GameViewModel {
         }
         //Reset
         self.stepCount.value = self.game.steps
+        self.game.updateGameState(state: .NotStarted)
+
     }
     
     func didSelectCardAt(index: Int) {
@@ -64,6 +66,7 @@ class GameViewModelFromGame: GameViewModel {
             
             //Check if game finishes
             if checkIfFinished() {
+                self.game.updateGameState(state: .Ended)
                 self.isFinished.value = true
             } else {
                 if firstOpenCard == nil {

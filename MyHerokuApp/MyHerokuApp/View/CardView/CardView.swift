@@ -22,18 +22,21 @@ class CardView: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         contentView.addSubview(numberLabel)
+        self.layer.cornerRadius = CGFloat(CardConstant.border.radius)
+        self.layer.borderWidth  = CGFloat(CardConstant.border.width)
+        self.layer.borderColor  = UIColor.cardBorderColor.cgColor
         self.applyConstraints()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        fatalError("Init coder ha")
+        fatalError("Init coder")
     }
     
     var card: Card? {
         didSet {
             if card?.state == .Close {
-                self.numberLabel.text = "?"
+                self.numberLabel.text = "💢"
             } else {
                 self.numberLabel.text = "\(card!.number)"
             }
@@ -42,15 +45,16 @@ class CardView: UICollectionViewCell {
     }
     
     fileprivate func updateCardDesign() {
-        self.layer.cornerRadius = CGFloat(CardConstant.border.radius)
-        self.layer.borderWidth  = CGFloat(CardConstant.border.width)
-        self.layer.borderColor  = UIColor.cardBorderColor.cgColor
         if self.card?.state == .Close {
-            self.backgroundColor = .cardBackgroundColorClose
-            self.numberLabel.textColor = .cardLabelTextColorClose
+            self.flipRightAnimation {
+                self.backgroundColor = .cardBackgroundColorClose
+                self.numberLabel.textColor = .cardLabelTextColorClose
+            }
         } else {
-            self.backgroundColor = .cardBackgroundColorOpen
-            self.numberLabel.textColor = .cardLabelTextColorOpen
+            self.flipLeftAnimation {
+                self.backgroundColor = .cardBackgroundColorOpen
+                self.numberLabel.textColor = .cardLabelTextColorOpen
+            }
         }
     }
     
@@ -58,7 +62,6 @@ class CardView: UICollectionViewCell {
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
         self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
         self.backgroundColor = .cardBackgroundColorClose
-        
     }
     
 }

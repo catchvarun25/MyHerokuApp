@@ -58,10 +58,10 @@ class GameViewController: UIViewController {
     //MARK:- Target Methods -
     
     @objc func resetGame() {
-        guard let gameModel = viewModel else {
+        guard let model = viewModel else {
             return
         }
-        gameModel.resetGame()
+        model.resetGame()
     }
     
     
