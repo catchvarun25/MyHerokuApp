@@ -16,4 +16,5 @@ protocol GameViewModel {
     var selectedCardIndex:Rx<Int> { get }
     func resetGame()
     func didSelectCardAt(index: Int)
+    init(_ game: Game, manager: GameControls)
 }

@@ -11,7 +11,7 @@ import UIKit
 class GameViewController: UIViewController {
     
     //Card Collection View
-    fileprivate let cardCollection: UICollectionView = {
+    private(set) var cardCollection: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         let collectionView:UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -21,7 +21,7 @@ class GameViewController: UIViewController {
     }()
     
     //Reset Button
-    fileprivate let resetButton: UIButton = {
+    private(set) var resetButton: UIButton = {
         let button:UIButton = UIButton()
         button.backgroundColor = .red
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class GameViewController: UIViewController {
     }()
     
     //Step Count Label
-    fileprivate let stepCountLabel: UILabel = {
+    private(set) var stepCountLabel: UILabel = {
         let label: UILabel = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = String(format: Constants.GameView.Literals.STEP_COUNT_LABEL, 0)

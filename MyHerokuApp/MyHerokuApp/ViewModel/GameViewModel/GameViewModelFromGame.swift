@@ -26,7 +26,7 @@ class GameViewModelFromGame: GameViewModel {
     
     private(set) var secondOpenCard:(index:Int, card:Card)?
     
-    init(_ game: Game, manager: GameControls) {
+    required init(_ game: Game, manager: GameControls) {
         self.game       = game
         self.stepCount  = Rx(game.steps)
         self.isFinished = Rx(game.isFinished)
