@@ -12,15 +12,15 @@ import XCTest
 class MyHerokuAppTests: XCTestCase {
     var sut:GameViewModelFromGame?
     override func setUpWithError() throws {
+        
+        //Given
         let gameManager:MockGameManager = MockGameManager.shared
         gameManager.startGame()
         sut = GameViewModelFromGame(gameManager.game, manager: gameManager)
-        // Put setup code here. This method is called before the invocation of each test method in the class.
     }
 
     override func tearDownWithError() throws {
         sut = nil
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
     func testGameSuccess() throws {
@@ -39,14 +39,33 @@ class MyHerokuAppTests: XCTestCase {
         sut?.didSelectCardAt(index: 7)
         sut?.didSelectCardAt(index: 8)
 
+        //Then
         let steps = sut?.game.steps
         let gameState = sut?.game.state
-        //Then
         XCTAssertEqual(steps, 12)
         XCTAssertEqual(gameState, GameState.Ended)
     }
     
-    
+    func testGameRestart() throws {
+        
+        //When
+        sut?.didSelectCardAt(index: 1)
+        sut?.didSelectCardAt(index: 2)
+        sut?.didSelectCardAt(index: 4)
+        sut?.didSelectCardAt(index: 10)
+        
+        sut?.resetGame()
+         
+        //Then
+        let steps      = sut?.game.steps
+        let gameState  = sut?.game.state
+        let isFinished = sut?.game.isFinished
+
+        XCTAssertEqual(steps, 0)
+        XCTAssertEqual(gameState, GameState.NotStarted)
+        XCTAssertEqual(isFinished, false)
+
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

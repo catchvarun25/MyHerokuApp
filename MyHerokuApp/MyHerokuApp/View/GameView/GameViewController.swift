@@ -55,6 +55,11 @@ class GameViewController: UIViewController {
         updateUI()
     }
     
+    override func viewWillTransition(to size: CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        self.cardCollection.reloadData()
+    }
+    
     //MARK:- Target Methods -
     
     @objc func resetGame() {
