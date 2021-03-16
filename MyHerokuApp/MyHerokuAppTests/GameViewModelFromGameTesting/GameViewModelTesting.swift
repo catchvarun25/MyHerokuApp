@@ -11,11 +11,16 @@ import XCTest
 
 class MyHerokuAppTests: XCTestCase {
     var sut:GameViewModelFromGame?
+    
+    override class func setUp() {
+        let gameManager:MockGameManager = MockGameManager.shared
+        gameManager.startGame()
+    }
+
     override func setUpWithError() throws {
         
         //Given
         let gameManager:MockGameManager = MockGameManager.shared
-        gameManager.startGame()
         sut = GameViewModelFromGame(gameManager.game, manager: gameManager)
     }
 
@@ -66,12 +71,4 @@ class MyHerokuAppTests: XCTestCase {
         XCTAssertEqual(isFinished, false)
 
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
