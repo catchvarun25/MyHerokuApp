@@ -9,10 +9,10 @@
 import Foundation
 
 class GameViewModelFromGame: GameViewModel {
-    
-    let game: Game
-    
+        
     private let gameManager: GameControls
+    
+    private(set) var game: Game
     
     private(set) var stepCount: Rx<Int>
     
@@ -54,10 +54,13 @@ class GameViewModelFromGame: GameViewModel {
         
         if firstOpenCard == nil || secondOpenCard == nil {
             let selectedCard = self.game.cards[index]
+            
+            //Card state should be closed and game should not be ended
             guard selectedCard.state == .Close && self.game.state != .Ended else {
                 return
             }
             
+            //On first card selected
             if self.game.state == .NotStarted {
                 self.game.updateGameState(state: .InProgress)
             }

@@ -9,7 +9,6 @@
 import Foundation
 
 extension Int {
-    
     mutating func incrementByOne() {
         self = self + 1
     }

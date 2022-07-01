@@ -20,6 +20,7 @@ class CardView: UICollectionViewCell {
     }()
     
     override init(frame: CGRect) {
+        self.card = Card(number: 0)
         super.init(frame: .zero)
         contentView.addSubview(numberLabel)
         self.layer.cornerRadius = CGFloat(CardConstant.border.radius)
@@ -29,23 +30,24 @@ class CardView: UICollectionViewCell {
     }
     
     required init?(coder: NSCoder) {
+        self.card = Card(number: 0)
         super.init(coder: coder)
         fatalError("Init coder")
     }
     
-    var card: Card? {
+    var card: Card {
         didSet {
-            if card?.state == .Close {
+            if card.state == .Close {
                 self.numberLabel.text = "💢"
             } else {
-                self.numberLabel.text = "\(card!.number)"
+                self.numberLabel.text = "\(card.number)"
             }
             self.updateCardDesign()
         }
     }
     
     fileprivate func updateCardDesign() {
-        if self.card?.state == .Close {
+        if self.card.state == .Close {
             self.flipRightAnimation {
                 self.backgroundColor = .cardBackgroundColorClose
                 self.numberLabel.textColor = .cardLabelTextColorClose

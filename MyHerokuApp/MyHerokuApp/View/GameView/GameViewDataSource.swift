@@ -11,20 +11,17 @@ import UIKit
 extension GameViewController:UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let gameModel = self.viewModel?.game else {
-            return 0
-        }
-        return gameModel.cards.count
+        return viewModel.game.cards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: CardView = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CardView.Literals.CARD_CELL_IDENTIFIER, for: indexPath) as! CardView
-        cell.card = self.viewModel?.game.cards[indexPath.row]
+        cell.card = viewModel.game.cards[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.viewModel?.didSelectCardAt(index: indexPath.row)
+        viewModel.didSelectCardAt(index: indexPath.row)
     }
 
 }

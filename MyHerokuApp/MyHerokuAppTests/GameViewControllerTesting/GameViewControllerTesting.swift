@@ -23,8 +23,7 @@ class GameViewControllerTests: XCTestCase {
         //Given
         let gameManager:MockGameManager = MockGameManager.shared
         let viewModel: GameViewModel = MockGameViewModel(gameManager.game, manager: gameManager)
-        sut = GameViewController()
-        sut?.viewModel = viewModel
+        sut = GameViewController(model: viewModel)
         _ = sut?.view
     }
 

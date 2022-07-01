@@ -41,11 +41,18 @@ class GameViewController: UIViewController {
         return label
     } ()
     
-    var viewModel:GameViewModel? {
-        didSet {
-            updateUI()
-        }
+    private(set) var viewModel:GameViewModel
+
+    
+    init(model: GameViewModel) {
+        self.viewModel = model
+        super.init(nibName: nil, bundle: nil)
     }
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     
     
     //MARK:- Life Cycle Methods -
@@ -63,10 +70,7 @@ class GameViewController: UIViewController {
     //MARK:- Target Methods -
     
     @objc func resetGame() {
-        guard let model = viewModel else {
-            return
-        }
-        model.resetGame()
+        viewModel.resetGame()
     }
     
     
@@ -98,19 +102,16 @@ class GameViewController: UIViewController {
     }
     
     fileprivate func updateUI() {
-        guard let gameModel = viewModel else {
-            return
-        }
-        gameModel.stepCount.bind { [unowned self] in
+        viewModel.stepCount.bind { [unowned self] in
             self.stepCountLabel.text = String(format: Constants.GameView.Literals.STEP_COUNT_LABEL, $0)
         }
-        gameModel.isReset.bind { [unowned self] _ in
+        viewModel.isReset.bind { [unowned self] _ in
             self.cardCollection.reloadData()
         }
-        gameModel.selectedCardIndex.bind({ [unowned self] (index) in
+        viewModel.selectedCardIndex.bind({ [unowned self] (index) in
             self.cardCollection.reloadItems(at: [IndexPath(row: index, section: 0)])
         })
-        gameModel.isFinished.bind { (isEnded) in
+        viewModel.isFinished.bind { (isEnded) in
             if isEnded {
                 self.showCongratsAlert()
             }
@@ -120,7 +121,7 @@ class GameViewController: UIViewController {
     fileprivate func showCongratsAlert() {
         let congratsAlert = UIAlertController(
             title: Constants.AlertView.Congrats.TITLE,
-            message: String(format: Constants.AlertView.Congrats.MESSAGE, (self.viewModel?.game.steps)!),
+            message: String(format: Constants.AlertView.Congrats.MESSAGE, self.viewModel.game.steps),
             preferredStyle: UIAlertController.Style.alert)
         let retryAction = UIAlertAction(title: Constants.AlertView.Congrats.TRY_AGAIN, style: UIAlertAction.Style.default) { _ in
             self.resetGame()
