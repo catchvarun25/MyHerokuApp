@@ -10,10 +10,10 @@ import Foundation
 
 protocol GameViewModel {
     var game: Game { get }
-    var stepCount: Rx<Int> { get }
-    var isFinished: Rx<Bool> { get }
-    var isReset: Rx<Bool> { get }
-    var selectedCardIndex:Rx<Int> { get }
+    var stepCount: Rx<Int> { get } // Keeping for reference for our custom RX class
+    var isFinishedPublisher: Published<Bool>.Publisher { get }
+    var isResetPublisher: Published<Bool>.Publisher { get }
+    var selectedCardIndexPublisher:Published<Int>.Publisher { get }
     func resetGame()
     func didSelectCardAt(index: Int)
     init(_ game: Game, manager: GameControls)

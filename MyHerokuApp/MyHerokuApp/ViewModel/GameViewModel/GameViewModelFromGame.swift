@@ -9,19 +9,23 @@
 import Foundation
 
 class GameViewModelFromGame: GameViewModel {
-        
     private let gameManager: GameControls
-    
     private(set) var game: Game
     
     private(set) var stepCount: Rx<Int>
     
-    private(set) var isFinished: Rx<Bool>
+    @Published
+    private var isFinished: Bool
+    var isFinishedPublisher: Published<Bool>.Publisher { $isFinished }
     
-    private(set) var isReset: Rx<Bool>
-    
-    private(set) var selectedCardIndex:Rx<Int>
-    
+    @Published
+    private var isReset: Bool
+    var isResetPublisher: Published<Bool>.Publisher { $isReset }
+
+    @Published
+    private var selectedCardIndex:Int
+    var selectedCardIndexPublisher: Published<Int>.Publisher { $selectedCardIndex }
+
     private(set) var firstOpenCard:(index:Int, card:Card)?
     
     private(set) var secondOpenCard:(index:Int, card:Card)?
@@ -29,9 +33,9 @@ class GameViewModelFromGame: GameViewModel {
     required init(_ game: Game, manager: GameControls) {
         self.game       = game
         self.stepCount  = Rx(game.steps)
-        self.isFinished = Rx(game.isFinished)
-        self.isReset    = Rx(false)
-        self.selectedCardIndex = Rx(0)
+        self.isFinished = game.isFinished
+        self.isReset    = false
+        self.selectedCardIndex = 0
         self.gameManager = manager
     }
     
@@ -41,7 +45,7 @@ class GameViewModelFromGame: GameViewModel {
         }
         //Reset Game Model
         gameManager.resetGame {
-            self.isReset.value = true
+            self.isReset = true
         }
         //Reset
         self.stepCount.value = self.game.steps
@@ -68,12 +72,12 @@ class GameViewModelFromGame: GameViewModel {
             selectedCard.updateCard(state: .Open)
             self.game.incrementSteps()
             self.stepCount.value = self.game.steps
-            self.selectedCardIndex.value = index
+            self.selectedCardIndex = index
             
             //Check if game finishes
             if checkIfFinished() {
                 self.game.updateGameState(state: .Ended)
-                self.isFinished.value = true
+                self.isFinished = true
             } else {
                 if firstOpenCard == nil {
                     firstOpenCard = (index, selectedCard)
@@ -83,8 +87,8 @@ class GameViewModelFromGame: GameViewModel {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                             self.firstOpenCard?.card.updateCard(state: .Close)
                             self.secondOpenCard?.card.updateCard(state: .Close)
-                            self.selectedCardIndex.value = self.firstOpenCard!.index
-                            self.selectedCardIndex.value = self.secondOpenCard!.index
+                            self.selectedCardIndex = self.firstOpenCard!.index
+                            self.selectedCardIndex = self.secondOpenCard!.index
                             self.firstOpenCard = nil
                             self.secondOpenCard = nil
                         }

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Combine
 
 class GameViewController: UIViewController {
-    
+    private var disposeBag = Set<AnyCancellable>()
+
     //Card Collection View
     private(set) var cardCollection: UICollectionView = {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
@@ -59,7 +61,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateStyle()
-        updateUI()
+        bindPublisher()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator:UIViewControllerTransitionCoordinator) {
@@ -101,21 +103,31 @@ class GameViewController: UIViewController {
         
     }
     
-    fileprivate func updateUI() {
+    fileprivate func bindPublisher() {
         viewModel.stepCount.bind { [unowned self] in
             self.stepCountLabel.text = String(format: Constants.GameView.Literals.STEP_COUNT_LABEL, $0)
         }
-        viewModel.isReset.bind { [unowned self] _ in
-            self.cardCollection.reloadData()
-        }
-        viewModel.selectedCardIndex.bind({ [unowned self] (index) in
-            self.cardCollection.reloadItems(at: [IndexPath(row: index, section: 0)])
-        })
-        viewModel.isFinished.bind { (isEnded) in
-            if isEnded {
+        viewModel.isResetPublisher
+            .receive(on: DispatchQueue.main, options: nil)
+            .dropFirst()
+            .sink { [unowned self] _ in
+                self.cardCollection.reloadData()
+            }
+            .store(in: &disposeBag)
+        viewModel.selectedCardIndexPublisher
+            .receive(on: DispatchQueue.main, options: nil)
+            .dropFirst()
+            .sink { [unowned self] index in
+                self.cardCollection.reloadItems(at: [IndexPath(row: index, section: 0)])
+            }
+            .store(in: &disposeBag)
+        viewModel.isFinishedPublisher
+            .receive(on: DispatchQueue.main, options: nil)
+            .dropFirst()
+            .sink { [unowned self] _ in
                 self.showCongratsAlert()
             }
-        }
+            .store(in: &disposeBag)
     }
     
     fileprivate func showCongratsAlert() {
