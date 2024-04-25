@@ -1,5 +1,5 @@
 # MyHerokuApp
-Heroku Game
+Heroku Game: Simple Cards Game
 
 About Application
 ======================
