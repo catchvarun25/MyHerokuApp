@@ -43,10 +43,10 @@ class GameViewController: UIViewController {
         return label
     } ()
     
-    private(set) var viewModel:GameViewModel
+    private(set) var viewModel:GameViewModelProtocol
 
     
-    init(model: GameViewModel) {
+    init(model: GameViewModelProtocol) {
         self.viewModel = model
         super.init(nibName: nil, bundle: nil)
     }
@@ -114,11 +114,12 @@ class GameViewController: UIViewController {
                 self.cardCollection.reloadData()
             }
             .store(in: &disposeBag)
-        viewModel.selectedCardIndexPublisher
+        viewModel.selectedCardIndexesPublisher
             .receive(on: DispatchQueue.main, options: nil)
             .dropFirst()
-            .sink { [unowned self] index in
-                self.cardCollection.reloadItems(at: [IndexPath(row: index, section: 0)])
+            .sink { [unowned self] indexes in
+                let indexPaths = indexes.map{IndexPath(row: $0, section: 0)}
+                self.cardCollection.reloadItems(at: indexPaths)
             }
             .store(in: &disposeBag)
         viewModel.isFinishedPublisher

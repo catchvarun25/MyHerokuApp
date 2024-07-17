@@ -20,8 +20,7 @@
 		B961120025FC6B9A003B1E4F /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96111FF25FC6B9A003B1E4F /* Card.swift */; };
 		B961120225FC6BF9003B1E4F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120125FC6BF9003B1E4F /* CardView.swift */; };
 		B961120425FC6C20003B1E4F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120325FC6C20003B1E4F /* GameViewController.swift */; };
-		B961120625FC6D1A003B1E4F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120525FC6D1A003B1E4F /* GameViewModel.swift */; };
-		B961120825FC6D52003B1E4F /* GameViewModelFromGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */; };
+		B961120825FC6D52003B1E4F /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120725FC6D52003B1E4F /* GameViewModel.swift */; };
 		B961120A25FC6D8F003B1E4F /* GameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120925FC6D8F003B1E4F /* GameConstants.swift */; };
 		B961120C25FC6DE9003B1E4F /* CardConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120B25FC6DE8003B1E4F /* CardConstants.swift */; };
 		B961120E25FC6F3A003B1E4F /* UIColor+CardTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B961120D25FC6F3A003B1E4F /* UIColor+CardTheme.swift */; };
@@ -74,8 +73,7 @@
 		B96111FF25FC6B9A003B1E4F /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		B961120125FC6BF9003B1E4F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B961120325FC6C20003B1E4F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		B961120525FC6D1A003B1E4F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelFromGame.swift; sourceTree = "<group>"; };
+		B961120725FC6D52003B1E4F /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		B961120925FC6D8F003B1E4F /* GameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConstants.swift; sourceTree = "<group>"; };
 		B961120B25FC6DE8003B1E4F /* CardConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardConstants.swift; sourceTree = "<group>"; };
 		B961120D25FC6F3A003B1E4F /* UIColor+CardTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+CardTheme.swift"; sourceTree = "<group>"; };
@@ -119,8 +117,7 @@
 		B946D11525FCEA8300FB5066 /* GameViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B961120525FC6D1A003B1E4F /* GameViewModel.swift */,
-				B961120725FC6D52003B1E4F /* GameViewModelFromGame.swift */,
+				B961120725FC6D52003B1E4F /* GameViewModel.swift */,
 			);
 			path = GameViewModel;
 			sourceTree = "<group>";
@@ -425,12 +422,11 @@
 				B961121225FC749C003B1E4F /* Int+Manipulation.swift in Sources */,
 				B961121425FC7ADA003B1E4F /* RxType.swift in Sources */,
 				B946D11C25FDB55900FB5066 /* UIFont+Label.swift in Sources */,
-				B961120625FC6D1A003B1E4F /* GameViewModel.swift in Sources */,
 				B961121925FC9497003B1E4F /* Math.swift in Sources */,
 				B96111CA25FC683A003B1E4F /* SceneDelegate.swift in Sources */,
 				B961121025FC6F57003B1E4F /* UIColor+AppTheme.swift in Sources */,
 				B961121D25FCB425003B1E4F /* GameViewDataSource.swift in Sources */,
-				B961120825FC6D52003B1E4F /* GameViewModelFromGame.swift in Sources */,
+				B961120825FC6D52003B1E4F /* GameViewModel.swift in Sources */,
 				B961120225FC6BF9003B1E4F /* CardView.swift in Sources */,
 				B9BEE52A25FFBABB00A242F3 /* UIView+Animation.swift in Sources */,
 				B96111FE25FC6B76003B1E4F /* Game.swift in Sources */,

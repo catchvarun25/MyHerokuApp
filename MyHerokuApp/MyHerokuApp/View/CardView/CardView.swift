@@ -37,23 +37,22 @@ class CardView: UICollectionViewCell {
     
     var card: Card {
         didSet {
-            if card.state == .Close {
-                self.numberLabel.text = "💢"
-            } else {
-                self.numberLabel.text = "\(card.number)"
-            }
             self.updateCardDesign()
         }
     }
     
     fileprivate func updateCardDesign() {
-        if self.card.state == .Close {
-            self.flipRightAnimation {
+        if card.state == .Close {
+            flipRightAnimation { [weak self] in
+                guard let self = self else { return }
+                self.numberLabel.text = "💢"
                 self.backgroundColor = .cardBackgroundColorClose
                 self.numberLabel.textColor = .cardLabelTextColorClose
             }
         } else {
-            self.flipLeftAnimation {
+            flipLeftAnimation { [weak self] in
+                guard let self = self else { return }
+                self.numberLabel.text = "\(self.card.number)"
                 self.backgroundColor = .cardBackgroundColorOpen
                 self.numberLabel.textColor = .cardLabelTextColorOpen
             }
@@ -61,9 +60,9 @@ class CardView: UICollectionViewCell {
     }
     
     fileprivate func applyConstraints() {
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
-        self.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
-        self.backgroundColor = .cardBackgroundColorClose
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-[numberLabel]-|", options: [], metrics: nil, views: ["numberLabel" : numberLabel]))
+        backgroundColor = .cardBackgroundColorClose
     }
     
 }

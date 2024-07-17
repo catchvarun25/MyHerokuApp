@@ -8,6 +8,12 @@
 
 import Foundation
 
+enum GameState {
+    case NotStarted
+    case InProgress
+    case Ended
+}
+
 class Game {
     private(set) var steps: Int       //steps taken by user
     private(set) var state:GameState  //Current state of game

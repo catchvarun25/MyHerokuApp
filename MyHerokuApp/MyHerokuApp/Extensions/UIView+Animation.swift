@@ -11,15 +11,19 @@ import UIKit
 extension UIView {
     
     func flipRightAnimation(_ onComplete: @escaping ()->()) {
-        UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromRight, animations: {
-            onComplete()
-        }, completion: nil)
+        DispatchQueue.main.async {
+            UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromRight, animations: {
+                onComplete()
+            }, completion: nil)
+        }
     }
     
     func flipLeftAnimation(_ onComplete: @escaping ()->()) {
-        UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: {
-            onComplete()
-        }, completion: nil)
+        DispatchQueue.main.async {
+            UIView.transition(with: self, duration: 0.5, options: .transitionFlipFromLeft, animations: {
+                onComplete()
+            }, completion: nil)
+        }
     }
     
 }

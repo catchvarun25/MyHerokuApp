@@ -8,12 +8,6 @@
 
 import Foundation
 
-enum GameState {
-    case NotStarted
-    case InProgress
-    case Ended
-}
-
 struct Constants {
     static let CARD_PAIRS_VALUE = 6
     static let NUMBER_OF_CARDS = CARD_PAIRS_VALUE * 2
